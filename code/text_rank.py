@@ -18,7 +18,7 @@ class text_rank:
         self.summary_n = None
 
     def select_summary_n(self):
-        self.summary_n = 10
+        self.summary_n = 8
         n_class = [(3, range(0, 11)),
                    (3, range(11, 21)),
                    (4, range(21, 31)),
@@ -27,7 +27,6 @@ class text_rank:
                    (7, range(51, 101))]
         for x in n_class:
             if self.sentences_n in x[1]:
-                print(x[1])
                 self.summary_n = x[0]
                 break
 
@@ -199,5 +198,6 @@ class text_rank:
         summary = []
         for idx in sorted_textrank :
             summary.append(article[idx])
+        join_summary = " ".join(summary)
 
-        return summary
+        return join_summary
