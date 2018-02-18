@@ -32,6 +32,6 @@ print("Text :\n", summarizer.text)
 print("\nSentences length after summarization :", summarizer.summary_n)
 print("Summary :\n",summary)
 </code></pre>
-
+<br><br>
 <hr>
 This code has been fitted to Naver news article, which can be seperated with ".". Kkma.sentences() method of Konlpy package - Korean Natural Language PYthon is more appropriate to split other unstructured data such as SNS buzz into sentences because there is no rule to distinguish sentences like "." in general case. Kkma sometimes has the mistake of separating the main clause and subordinate clause, but I think it is the best one in this case. (I usually prefer mecab-ko for morpheme analysis, but mecab-ko pakcage does not support sentences function yet.)
